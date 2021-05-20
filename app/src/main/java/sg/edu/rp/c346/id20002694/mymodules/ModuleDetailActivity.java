@@ -4,11 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class ModuleDetailActivity extends AppCompatActivity {
 
     TextView tvAns;
+    Button back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,6 +19,7 @@ public class ModuleDetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_module_detail);
 
         tvAns = findViewById(R.id. tvAns);
+        back = findViewById(R.id. buttonBack);
 
         Intent intentReceived=getIntent();
 
@@ -28,5 +32,13 @@ public class ModuleDetailActivity extends AppCompatActivity {
         else if(mod2!=null){
             tvAns.setText(mod2);
         }
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent( ModuleDetailActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

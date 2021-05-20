@@ -3,4 +3,5 @@
     <string name="tv1">C346 Android Programming</string>
     <string name="tv2">C349 iPad Programming</string>
     <string name="tvAns"> </string>
+    <string name="buttonBack"> Back to List </string>
 </resources>
